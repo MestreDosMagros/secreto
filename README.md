@@ -1,7 +1,7 @@
 # Teste proeficiência
 
 ### Tipo: C# .Net
-### Duração: 25 min
+### Duração: 1 hora
 
 ---
 
