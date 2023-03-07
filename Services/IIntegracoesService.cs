@@ -1,4 +1,4 @@
 public interface IIntegracoesService
 {
-    void Executar();
+    string Executar();
 }

@@ -1,16 +1,20 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("[controller]")]
 public class IntegracoesController : ControllerBase
 {
-    public IntegracoesController()
+    private readonly IMediator _mediator;
+
+    public IntegracoesController(IMediator mediator)
     {
+        _mediator = mediator;
     }
 
     [HttpPost]
-    public IActionResult Executar()
+    public async Task<IActionResult> Executar()
     {
-        throw new NotImplementedException();
+        return Ok(await _mediator.Send(new ExecutarIntegracaoCommand()));
     }
 }

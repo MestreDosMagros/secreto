@@ -5,8 +5,8 @@ public class IntegracoesService : IIntegracoesService
     
     private readonly Random _rnd = new(420); 
 
-    public void Executar()
+    public string Executar()
     {
-        var resultado = _rnd.Next() % 2 == 0 ? jsonSucesso : jsonErro;
+        return _rnd.Next() % 2 == 0 ? jsonSucesso : jsonErro;
     }
 }
